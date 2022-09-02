@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 
-docker-compose up
+DOCKER_BUILDKIT=1 docker-compose up
