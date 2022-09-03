@@ -1,5 +1,4 @@
 #/bin/bash
-
-# conda activate ldm;
-
+conda init;
+conda activate ldm;
 tail -F anything;

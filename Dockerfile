@@ -31,12 +31,12 @@ COPY ./configs .
 COPY ./setup.py .
 RUN conda env create -f ./environment.yaml
 
-RUN conda activate ldm
-RUN conda install -y -c conda-forge cudatoolkit-dev==11.3.1 cudatoolkit==11.3.1 cudnn==8.2.1.32
-RUN pip install transformers==4.19.2 scann kornia==0.6.4 torchmetrics==0.6.0
-RUN pip install git+https://github.com/arogozhnikov/einops.git
-RUN pip install https://github.com/learning-at-home/hivemind.git
-RUN pip install opencv-python matplotlib
+# RUN conda init
+# RUN conda activate ldm
+# RUN conda install -y -c conda-forge cudatoolkit-dev==11.3.1 cudatoolkit==11.3.1 cudnn==8.2.1.32
+# RUN pip install transformers==4.19.2 scann kornia==0.6.4 torchmetrics==0.6.0
+# RUN pip install git+https://github.com/arogozhnikov/einops.git
+# RUN pip install https://github.com/learning-at-home/hivemind.git
+# RUN pip install opencv-python matplotlib
 
-COPY ./scripts .
-RUN chmod +x ./scripts/*
+# COPY ./scripts .

@@ -1,12 +1,8 @@
 down:
-	./start.sh --purge
-stop:
-	./start.sh --purge
-start:
-	./start.sh
-up:
-	./start.sh --force-pull
+	docker-compose down
 
+up:
+	docker-compose up -d --remove-orphans
 backend: 
 	./start.sh --backend; docker exec -it ocean_backend_1;
 
